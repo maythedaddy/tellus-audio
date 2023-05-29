@@ -1,0 +1,88 @@
+@use "./variables" as var;
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  position: relative;
+
+  &__bar {
+    background-color: rgba(var.$color-3, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+
+    & h2 {
+      color: var.$color-4;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    filter: brightness(0);
+    margin-left: 3rem;
+    padding: 0.5rem;
+  }
+
+  &__message {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    color: var.$color-4;
+    text-transform: capitalize;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.search {
+  flex: 0 0 20%;
+  display: flex;
+  transform: translateX(20rem);
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: #fff;
+    border: none;
+    width: 90%;
+    padding: 0.5rem 2rem;
+    border-radius: 10rem;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 3rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom: 1px solid var.$color-4;
+
+    & a {
+      color: var.$color-4;
+      text-decoration: none;
+    }
+  }
+}
