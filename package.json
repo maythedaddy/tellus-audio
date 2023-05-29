@@ -1,0 +1,22 @@
+{
+  "name": "tellus-audio-site",
+  "version": "1.0.0",
+  "description": "This is the site of a fictional music software company I created. <br>",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://maythedaddy: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@github.com/maythedaddy/tellus-audio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maythedaddy/tellus-audio/issues"
+  },
+  "homepage": "https://github.com/maythedaddy/tellus-audio#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
