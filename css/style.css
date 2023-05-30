@@ -1,20 +1,29 @@
-html {
-  font-size: 62.5%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Futura PT", sans-serif;
-}
-
 /************************************
 * #2C3333
 * #2E4F4F
 * #0E8388
 * #CBE4DE
 ************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Futura PT", sans-serif;
+  background-color: #2c3333;
+}
+
+/****************************
+* HEADER
+*****************************/
 .header {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/hero.jpg);
@@ -58,7 +67,21 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.header__message-sub {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #cbe4de;
+  text-transform: capitalize;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+/****************************
+* SEARCH
+*****************************/
 .search {
   flex: 0 0 20%;
   display: flex;
@@ -75,6 +98,9 @@ body {
   border-radius: 10rem;
 }
 
+/****************************
+* NAVGATION
+*****************************/
 .nav__list {
   display: flex;
   justify-content: space-around;
@@ -90,6 +116,63 @@ body {
 .nav__item a {
   color: #cbe4de;
   text-decoration: none;
+}
+
+.main {
+  max-width: 145rem;
+  margin: 0 auto;
+}
+
+.section {
+  max-width: 120rem;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.sub-section {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  padding: 6rem;
+}
+.sub-section__img-box {
+  width: 60rem;
+  flex: 0 0 50%;
+}
+.sub-section__img {
+  width: 100%;
+  object-fit: cover;
+}
+.sub-section__text {
+  color: #cbe4de;
+}
+.sub-section__text h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+.sub-section__text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card-section {
+  background-color: #fff;
+}
+.card-section__text h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.mg-bottom-sm {
+  margin-bottom: 1rem;
+}
+
+.mg-bottom-md {
+  margin-bottom: 3rem;
+}
+
+.mg-bottom-ls {
+  margin-bottom: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
