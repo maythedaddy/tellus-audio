@@ -1,0 +1,70 @@
+@use "./variables" as var;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+  padding: 2rem 3rem;
+}
+
+.card {
+  background-color: rgba(var.$color-3, 0.8);
+  height: 50rem;
+  border-radius: 5px;
+
+  &__picture {
+    height: 20rem;
+    background-size: cover;
+    background-position: bottom;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: url(../images/desert.jpg);
+    }
+
+    &--2 {
+      background-image: url(../images/forest.jpg);
+    }
+
+    &--3 {
+      background-image: url(../images/sea-2.jpg);
+    }
+    &--4 {
+      background-image: url(../images/sky.jpg);
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    color: var.$color-4;
+
+    &__name {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var.$color-4;
+        }
+      }
+    }
+  }
+}
