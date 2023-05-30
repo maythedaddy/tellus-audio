@@ -1,0 +1,14 @@
+@use "./variables" as var;
+
+.main {
+  max-width: 145rem;
+  // background-color: #ccc;
+  margin: 0 auto;
+}
+
+.section {
+  max-width: 120rem;
+  max-height: 100vh;
+  // background-color: #fff;
+  margin: 0 auto;
+}

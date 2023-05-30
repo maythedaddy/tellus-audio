@@ -1,5 +1,8 @@
 @use "./variables" as var;
 
+/****************************
+* HEADER
+*****************************/
 .header {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/hero.jpg);
@@ -46,9 +49,24 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &-sub {
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 500;
+      color: var.$color-4;
+      text-transform: capitalize;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
+/****************************
+* SEARCH
+*****************************/
 .search {
   flex: 0 0 20%;
   display: flex;
@@ -66,6 +84,9 @@
   }
 }
 
+/****************************
+* NAVGATION
+*****************************/
 .nav {
   &__list {
     display: flex;

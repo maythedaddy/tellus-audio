@@ -1,0 +1,43 @@
+@use "./variables" as var;
+
+.sub-section {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+  padding: 6rem;
+
+  &__img-box {
+    width: 60rem;
+    flex: 0 0 50%;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    color: var.$color-4;
+
+    & h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.card-section {
+  background-color: #fff;
+
+  &__text {
+    & h2 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  }
+}
