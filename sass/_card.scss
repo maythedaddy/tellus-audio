@@ -1,10 +1,11 @@
-@use "./variables" as var;
+@use "./variables"as var;
 
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 5rem;
   padding: 2rem 3rem;
+  border-bottom: 1px solid var.$color-3;
 }
 
 .card {
@@ -30,6 +31,7 @@
     &--3 {
       background-image: url(../images/sea-2.jpg);
     }
+
     &--4 {
       background-image: url(../images/sky.jpg);
     }

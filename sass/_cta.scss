@@ -1,0 +1,44 @@
+@use './variables'as var;
+
+.cta {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    color: var.$color-4;
+
+    & h2 {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    & p {
+      font-size: 2rem;
+      line-height: 2;
+      margin-bottom: auto;
+    }
+  }
+
+  &__btn {
+    font-size: 2rem;
+    font-weight: 400;
+    align-self: center;
+    border: none;
+    transition: all .3s;
+
+    &:hover {
+      transform: translateY(-1.5px);
+      color: var.$color-2;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
