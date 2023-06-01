@@ -8,5 +8,5 @@ https://tellus-audio.netlify.app/ <br>
 
 💡The following will be supported in the future.<br>
 - Responsive support.
-- Support for card hover effects.
+- ~~Support for card hover effects.~~ done
 - Sample sound playback function.
