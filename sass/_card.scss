@@ -1,17 +1,51 @@
-@use "./variables"as var;
+@use "./variables" as var;
 
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 5rem;
-  padding: 2rem 3rem;
-  border-bottom: 1px solid var.$color-3;
+  // grid-column: 1fr;
+  column-gap: 10rem;
 }
 
 .card {
-  background-color: rgba(var.$color-3, 0.8);
+  perspective: 150rem;
+  position: relative;
   height: 50rem;
-  border-radius: 5px;
+
+  &__side {
+    background-color: var.$color-3;
+    height: 50rem;
+    transition: all 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 4px;
+
+    &--front {
+    }
+
+    &--back {
+      background-color: var.$color-3;
+      transform: rotateY(180deg);
+      background-image: linear-gradient(to right bottom, var.$color-2, var.$color-3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12rem;
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
 
   &__picture {
     height: 20rem;
@@ -51,7 +85,7 @@
     }
 
     &__text {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 300;
     }
 
@@ -68,5 +102,22 @@
         }
       }
     }
+  }
+
+  &__price-box {
+  }
+
+  &__price-value {
+    font-size: 5rem;
+    font-weight: 500;
+    color: var.$color-4;
+  }
+
+  &__btn {
+    border-radius: 6rem;
+    background-color: var.$color-2;
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+    font-weight: 400;
   }
 }
