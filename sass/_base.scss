@@ -29,3 +29,9 @@ html.active,
 body.active {
   overflow: hidden;
 }
+
+body.active {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
