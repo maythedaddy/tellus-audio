@@ -4,13 +4,22 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   // grid-column: 1fr;
-  column-gap: 10rem;
+  column-gap: 5rem;
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
 }
 
 .card {
   perspective: 150rem;
   position: relative;
   height: 50rem;
+  width: 30rem;
+
+  @media (max-width: 1440px) {
+    width: 24rem;
+  }
 
   &__side {
     background-color: var.$color-3;
@@ -82,6 +91,14 @@
     &__name {
       font-size: 3rem;
       font-weight: 500;
+
+      @media (max-width: 1440px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 1.5rem;
+      }
     }
 
     &__text {
@@ -99,18 +116,23 @@
 
         &:not(:last-child) {
           border-bottom: 1px solid var.$color-4;
+
+          @media (max-width: 1024px) {
+            padding-bottom: 0;
+          }
         }
       }
     }
-  }
-
-  &__price-box {
   }
 
   &__price-value {
     font-size: 5rem;
     font-weight: 500;
     color: var.$color-4;
+
+    @media (max-width: 1024px) {
+      font-size: 4rem;
+    }
   }
 
   &__btn {
