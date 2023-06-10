@@ -11,4 +11,10 @@ toggle.addEventListener('click', () => {
   header.classList.toggle('active');
   html.classList.toggle('active');
   body.classList.toggle('active');
+
+  if (document.body.classList.contains('active')) {
+    window.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+    });
+  }
 });
