@@ -46,12 +46,20 @@
     @media (max-width: 1440px) {
       gap: 20rem;
     }
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: 690px) {
+      flex-direction: column;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
   }
 

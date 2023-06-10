@@ -9,6 +9,11 @@
   @media (max-width: 1024px) {
     display: flex;
   }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .card {
@@ -19,6 +24,22 @@
 
   @media (max-width: 1440px) {
     width: 24rem;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 40%;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 690px), (hover: none) {
+    flex: 0 0 60%;
+    height: auto;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  @media (max-width: 690px), (hover: none) {
+    flex: 1 0 60%;
   }
 
   &__side {
@@ -33,6 +54,16 @@
     overflow: hidden;
     border-radius: 4px;
 
+    // @media (max-width: 690px) {
+    //   height: 60rem;
+    // }
+
+    @media (max-width: 690px), (hover: none) {
+      height: auto;
+      position: relative;
+      transform: rotateY(0);
+    }
+
     &--front {
     }
 
@@ -45,6 +76,12 @@
       justify-content: center;
       align-items: center;
       gap: 12rem;
+
+      @media (max-width: 690px), (hover: none) {
+        transform: rotateY(0);
+        gap: 2rem;
+        padding: 3rem 0 1rem 0;
+      }
     }
   }
 
@@ -62,6 +99,10 @@
     background-position: bottom;
     object-fit: cover;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    @media (max-width: 690px) {
+      height: 30rem;
+    }
 
     &--1 {
       background-image: url(../images/desert.jpg);
@@ -99,11 +140,19 @@
       @media (max-width: 1024px) {
         font-size: 1.5rem;
       }
+
+      @media (max-width: 690px) {
+        font-size: 5.5rem;
+      }
     }
 
     &__text {
       font-size: 1.1rem;
       font-weight: 300;
+
+      @media (max-width: 690px) {
+        font-size: 1.5rem;
+      }
     }
 
     & ul {
@@ -113,6 +162,10 @@
         font-size: 1.5rem;
         padding: 0.5rem;
         text-align: center;
+
+        @media (max-width: 690px) {
+          font-size: 2.5rem;
+        }
 
         &:not(:last-child) {
           border-bottom: 1px solid var.$color-4;
