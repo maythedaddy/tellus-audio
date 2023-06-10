@@ -6,6 +6,15 @@
   gap: 12rem;
   padding: 6rem;
 
+  @media (max-width: 768px) {
+    gap: 6rem;
+  }
+
+  @media (max-width: 690px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
   &__img-box {
     width: 60rem;
     flex: 0 0 50%;
@@ -22,11 +31,20 @@
     & h1 {
       font-size: 4.5rem;
       font-weight: 700;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
 
     & p {
       font-size: 1.5rem;
       font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
     }
   }
 }

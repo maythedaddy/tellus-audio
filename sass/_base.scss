@@ -10,9 +10,22 @@
 
 html {
   font-size: 62.5%;
+
+  @media (max-width: 1024px) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 690px) {
+    font-size: 42%;
+  }
 }
 
 body {
   font-family: "Futura PT", sans-serif;
   background-color: var.$color-1;
+}
+
+html.active,
+body.active {
+  overflow: hidden;
 }
