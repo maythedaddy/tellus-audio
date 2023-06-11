@@ -1,4 +1,4 @@
-@use "./variables" as var;
+@use "./variables"as var;
 
 .footer {
   background-color: var.$color-2;
@@ -23,6 +23,7 @@
     padding: 3rem 0;
     padding-bottom: 2rem;
   }
+
   &__logo-text {
     text-align: center;
     font-size: 6rem;
@@ -40,8 +41,7 @@
     display: flex;
     gap: 40rem;
 
-    &--1 {
-    }
+    &--1 {}
 
     @media (max-width: 1440px) {
       gap: 20rem;
@@ -61,6 +61,7 @@
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   &__list {

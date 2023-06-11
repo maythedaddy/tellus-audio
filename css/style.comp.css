@@ -55,6 +55,7 @@ body.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 5rem;
+  justify-items: center;
 }
 @media (max-width: 1024px) {
   .cards {
@@ -73,11 +74,6 @@ body.active {
   position: relative;
   height: 50rem;
   width: 30rem;
-}
-@media (max-width: 1440px) {
-  .card {
-    width: 24rem;
-  }
 }
 @media (max-width: 768px) {
   .card {
@@ -370,6 +366,7 @@ body.active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .footer__list {
   list-style: none;

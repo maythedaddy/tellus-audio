@@ -1,10 +1,11 @@
-@use "./variables" as var;
+@use "./variables"as var;
 
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   // grid-column: 1fr;
   column-gap: 5rem;
+  justify-items: center;
 
   @media (max-width: 1024px) {
     display: flex;
@@ -22,9 +23,9 @@
   height: 50rem;
   width: 30rem;
 
-  @media (max-width: 1440px) {
-    width: 24rem;
-  }
+  // @media (max-width: 1440px) {
+  //   width: 24rem;
+  // }
 
   @media (max-width: 768px) {
     flex: 0 0 40%;
@@ -50,14 +51,14 @@
     overflow: hidden;
     border-radius: 4px;
 
-    @media (max-width: 690px), (hover: none) {
+    @media (max-width: 690px),
+    (hover: none) {
       height: auto;
       position: relative;
       transform: rotateY(0);
     }
 
-    &--front {
-    }
+    &--front {}
 
     &--back {
       background-color: var.$color-3;
